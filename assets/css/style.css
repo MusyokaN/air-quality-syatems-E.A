@@ -537,7 +537,17 @@ h6 {
     height: 120vh;
   }
 }
-
+.carousel-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Change the color as needed */
+  font-size: 2em; /* Adjust the font size as needed */
+  font-weight: bold; /* Make the text bold */
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Add a text shadow for better readability */
+}
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
@@ -963,7 +973,7 @@ section {
 
 .clients .client-logo img {
   transition: all 0.3s ease-in-out;
-  height: 36px;
+  height: 42px;
   filter: grayscale(100%);
 }
 
@@ -1100,7 +1110,7 @@ section {
 .skills .progress {
   height: 60px;
   display: block;
-  background: none;
+  background: #fff;
   border-radius: 0;
 }
 
