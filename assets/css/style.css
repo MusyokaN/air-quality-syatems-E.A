@@ -33,6 +33,245 @@ h6 {
   font-family: "Roboto", sans-serif;
 }
 
+/*Products we offer*/
+.articles-section {
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.articles-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.articles-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.article {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: 10px;
+  flex-basis: calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
+  text-align: center;
+  overflow: hidden; /* Added to hide overflow when image is transformed */
+}
+
+.article img {
+  max-width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  transition: transform 0.3s ease-in-out; /* Added transition for smooth effect */
+}
+
+.article:hover img {
+  transform: scale(1.1); /* Scale the image to create a zoom effect */
+}
+
+.article h3 {
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+.article p {
+  color: #777;
+    font-size: 14px;
+    margin: 15px 20px; /* Add margin to leave space from each margin */
+    text-align: center; /* Center align the text */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .article {
+      flex-basis: calc(50% - 20px);
+      max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .article {
+      flex-basis: 100%;
+      max-width: 100%;
+  }
+}
+/*What makes us diferent*/
+.aeroqual-section {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding: 80px 20px; /* Increased padding for larger height */
+  background: linear-gradient(to right, #e0f7fa, #80d8ff);
+  justify-content: center;
+  border-bottom-left-radius: 50% 10%; /* Smooth curve at the bottom left */
+  overflow: hidden; /* Ensure the curve doesn't overflow */
+}
+
+.left-column, .right-column {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+}
+
+.left-column h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.left-column h1 {
+  margin: 10px 0;
+  font-size: 36px;
+  color: #333;
+}
+
+.left-column p {
+  margin: 20px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.learn-more-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #5c6bc0;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.learn-more-btn:hover {
+  background-color: #3949ab;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.icon {
+  font-size: 24px;
+  color: #5c6bc0;
+  margin-right: 10px;
+}
+
+.right-column p {
+  margin: 0;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .left-column, .right-column {
+      flex: 100%;
+      text-align: center;
+  }
+
+  .right-column {
+      align-items: center;
+  }
+
+  .feature {
+      justify-content: center;
+  }
+}
+/*Air monitoring*/
+.customer-success {
+  padding: 20px;
+  text-align: center;
+  background-color: #1a1a3e;
+  color: white;
+}
+
+.customer-success h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.case-studies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 1200px; /* Limits the maximum width */
+  padding: 0 20px; /* Adds padding on the sides */
+}
+
+.case-study {
+  background-color: #2d2d5c;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 350px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.case-study:hover {
+  transform: scale(1.05);
+}
+
+.image-container {
+  overflow: hidden;
+  height: 200px; /* Fixed height for the image container */
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+  transition: transform 0.3s ease;
+}
+
+.case-study:hover .image-container img {
+  transform: scale(1.1);
+}
+
+.case-info {
+  padding: 15px;
+  flex-grow: 1; /* Ensures the info section takes the remaining space */
+}
+
+.case-info h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+  color: #ccccff;
+}
+
+.case-info p {
+  font-size: 1em;
+  color: #e0e0e0;
+}
+
+.case-info a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #66ccff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.case-info a:hover {
+  text-decoration: underline;
+}
+/*Mission and Vission*/
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -87,7 +326,7 @@ h6 {
 }
 
 #header .logo {
-  font-size: 28px;
+  font-size: 20px;
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -105,7 +344,7 @@ h6 {
 }
 
 #header .logo img {
-  max-height: 40px;
+  max-height: 60px;
 }
 
 /*--------------------------------------------------------------
@@ -187,7 +426,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #1bbd36;
+  color: #5c6bc0;
 }
 
 .navbar .dropdown ul {
@@ -503,7 +742,7 @@ h6 {
 
 #hero .carousel-indicators li.active {
   opacity: 1;
-  background: #1bbd36;
+  background: #5c6bc0;
 }
 
 @media (min-width: 1024px) {
@@ -594,7 +833,7 @@ section {
 --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 15px 0;
-  background: #1bbd36;
+  background: #5c6bc0;
   min-height: 40px;
   margin-top: 72px;
 }
@@ -973,7 +1212,7 @@ section {
 
 .clients .client-logo img {
   transition: all 0.3s ease-in-out;
-  height: 42px;
+  height: 90px;
   filter: grayscale(100%);
 }
 
@@ -987,7 +1226,7 @@ section {
 --------------------------------------------------------------*/
 .about-us .content h2 {
   font-weight: 700;
-  font-size: 42px;
+  font-size: 25px;
   line-height: 60px;
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -1713,7 +1952,7 @@ section {
 }
 
 .blog .entry .entry-footer a:hover {
-  color: #1bbd36;
+  color: #5c6bc0;
 }
 
 .blog .entry .entry-footer .cats {
@@ -1822,7 +2061,7 @@ section {
 }
 
 .blog .blog-comments .comment h5 a:hover {
-  color: #1bbd36;
+  color: #5c6bc0;
 }
 
 .blog .blog-comments .comment h5 .reply {
@@ -1868,7 +2107,7 @@ section {
 
 .blog .blog-comments .reply-form input:focus {
   box-shadow: none;
-  border-color: #57e76f;
+  border-color: #5c6bc0;
 }
 
 .blog .blog-comments .reply-form textarea {
@@ -2234,7 +2473,7 @@ section {
 }
 
 #footer .social-links a:hover {
-  background: #1bbd36;
+  background: #5c6bc0;
   color: #fff;
   text-decoration: none;
 }
